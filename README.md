@@ -893,5 +893,5 @@ response = sendChat(messages2)
 实现十句语句生成结果如下：
 ![Image text](https://github.com/ywlin111/Fudan-AI-design-mid-term-work/blob/main/result.png)
 # 5.其他 
-本项目包含较大的文件，您可以从以下链接下载：[Download large files from GitHub Releases](https://github.com/your-username/your-repo/releases/tag/your-version)
+本项目包含较大的文件，您可以从以下链接下载：[Download large files from GitHub Releases](https://github.com/ywlin111/Fudan-AI-design-mid-term-work/releases/tag/v1.0.0)
 
