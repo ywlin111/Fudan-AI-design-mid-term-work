@@ -1,5 +1,5 @@
 # Fudan-AI-design-mid-term-work
-#1、环境安装
+# 1、环境安装    
 使用py310环境，Torch2.4.0，单块3090显卡。主要依赖包：
 ```python
 pip install deepspeed -U
@@ -12,8 +12,8 @@ git clone --depth 1 https://github.com/hiyouga/LLaMA-Factory.git
 cd LLaMA-Factory
 pip install -e ".[torch,metrics]"
 ```
-#2、数据
-直接使用adgen开源数据集
+# 2、数据
+直接使用adgen开源数据集    
 在LLaMA-Factory的Dataset.info中定义如下：
 ```python
 "adgen_train": {
@@ -27,10 +27,9 @@ pip install -e ".[torch,metrics]"
   }
 ```
 数据集的大致内容截图：
-
 ![Image text](https://github.com/ywlin111/Fudan-AI-design-mid-term-work/blob/main/dataset.png)
 当输入为特定格式的精简描述时，预期对应的输出应该是基于描述扩写的流畅句子，内容基本覆盖原有信息。
-#3、训练配置
+# 3、训练配置
 基础模型使用Qwen2.5-0.5B-Instruct，进行LoRA微调，使用deepspeed/ds_z0_config.json作为加速配置，训练3个Epoch。
 ```python
 ### model
@@ -75,8 +74,8 @@ per_device_eval_batch_size: 1
 eval_strategy: steps
 eval_steps: 500
 ```
-#4、训练和测试脚本
-##4.1 训练
+# 4、训练和测试脚本
+## 4.1 训练
 训练脚本：
 ```python
 #!/bin/bash
@@ -804,7 +803,7 @@ drwxr-xr-x 4 root root     4096 Oct 22 20:05 runs
 -rw-r--r-- 1 root root      202 Oct 22 20:22 train_results.json
 -rw-r--r-- 1 root root  2776833 Oct 22 20:22 vocab.json
 ```
-权重合并
+权重合并：
 ```python
 import torch
 import os
@@ -886,7 +885,7 @@ messages2 = [{'role': 'system',
 
 response = sendChat(messages2)
 ```
-输出：这款阔腿裤的版型设计，宽松的裤腿线条，可以很好的修饰腿部的线条，让双腿看起来更加修长。而裤身的两侧，分别设计了性感的荷叶边，让整体的造型更加的浪漫。
+输出：这款阔腿裤的版型设计，宽松的裤腿线条，可以很好的修饰腿部的线条，让双腿看起来更加修长。而裤身的两侧，分别设计了性感的荷叶边，让整体的造型更加的浪漫。    
 测试效果截图：
 ![Image text](https://github.com/ywlin111/Fudan-AI-design-mid-term-work/blob/main/output1.png)
 对比微调前的大模型输出效果如下：
