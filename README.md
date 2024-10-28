@@ -28,7 +28,7 @@ pip install -e ".[torch,metrics]"
 ```
 数据集的大致内容截图：
 
-![Image text](https://github.com/ywlin111/Fudan-AI-design-mid-term-work/dataset.png)
+![Image text](https://github.com/ywlin111/Fudan-AI-design-mid-term-work/blob/main/dataset.png)
 当输入为特定格式的精简描述时，预期对应的输出应该是基于描述扩写的流畅句子，内容基本覆盖原有信息。
 #3、训练配置
 基础模型使用Qwen2.5-0.5B-Instruct，进行LoRA微调，使用deepspeed/ds_z0_config.json作为加速配置，训练3个Epoch。
@@ -888,4 +888,6 @@ response = sendChat(messages2)
 ```
 输出：这款阔腿裤的版型设计，宽松的裤腿线条，可以很好的修饰腿部的线条，让双腿看起来更加修长。而裤身的两侧，分别设计了性感的荷叶边，让整体的造型更加的浪漫。
 测试效果截图：
+![Image text](https://github.com/ywlin111/Fudan-AI-design-mid-term-work/blob/main/output1.png)
 对比微调前的大模型输出效果如下：
+![Image text](https://github.com/ywlin111/Fudan-AI-design-mid-term-work/blob/main/output2.png)
