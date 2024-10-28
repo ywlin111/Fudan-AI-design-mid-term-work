@@ -28,7 +28,7 @@ pip install -e ".[torch,metrics]"
 ```
 数据集的大致内容截图：
 
-![Image text](https://github.com/ywlin111/Fudan-AI-design-mid-term-work/dataset.png）
+![Image text](https://github.com/ywlin111/Fudan-AI-design-mid-term-work/dataset.png)
 当输入为特定格式的精简描述时，预期对应的输出应该是基于描述扩写的流畅句子，内容基本覆盖原有信息。
 #3、训练配置
 基础模型使用Qwen2.5-0.5B-Instruct，进行LoRA微调，使用deepspeed/ds_z0_config.json作为加速配置，训练3个Epoch。
