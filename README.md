@@ -890,3 +890,5 @@ response = sendChat(messages2)
 ![Image text](https://github.com/ywlin111/Fudan-AI-design-mid-term-work/blob/main/output1.png)
 对比微调前的大模型输出效果如下：
 ![Image text](https://github.com/ywlin111/Fudan-AI-design-mid-term-work/blob/main/output2.png)
+实现十句语句生成结果如下：
+![Image text](https://github.com/ywlin111/Fudan-AI-design-mid-term-work/blob/main/result.png)
